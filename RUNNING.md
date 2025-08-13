@@ -43,3 +43,20 @@ python code/label_c4.py \
 - **JSONL output**: Contains classified text records with AAL scores
 - **TDigest JSON**: Contains score distributions for each class (AA, H, A, W)
 - **State file**: Allows resuming interrupted runs
+
+## Generating Plots
+
+### Vocabulary Overlap Plot
+```bash
+python code/vocabulary_overlap_plot.py --input-file code/results.jsonl --max-docs 5000
+```
+
+### Distribution Plots from TDigest
+```bash
+python code/plot_distributions.py --tdigest-file code/distributions.json
+```
+
+### Lyrics-C4 Vocabulary Overlap
+```bash
+python code/lyrics_c4_overlap.py --lyrics-file /path/to/updated_rappers.csv --max-lyrics 1000
+```
